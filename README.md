@@ -34,7 +34,7 @@ cd github-repo-visualizer
 3. Enter a GitHub username and click Fetch Repos
 
 ## Screenshots
-![Example Image](Screenshot 2025-08-13 at 6.40.09 PM.png).
+![Example Image](ScreenShots/Video.mov).
 
 
 ## Usage
