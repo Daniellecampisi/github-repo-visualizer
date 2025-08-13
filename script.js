@@ -17,14 +17,23 @@ document.getElementById("fetchBtn").addEventListener("click", async () =>
     }
 
     const languageCount = {};
+    let totalStars = 0;
+    let totalForks = 0;
 
     repos.forEach(repo => {
     if (repo.language) {
         languageCount[repo.language] = (languageCount[repo.language] || 0) + 1;
     }
+        totalStars += repo.stargazers_count;
+        totalForks += repo.forks_count;
     });
 
+    document.getElementById("stars").textContent = `Total Stars: ${totalStars}`;
+    document.getElementById("forks").textContent = `Total Forks: ${totalForks}`;
+
+
     const ctx = document.getElementById('langChart').getContext('2d');
+    
     new Chart(ctx, {
     type: 'pie',
     data: {
@@ -42,5 +51,7 @@ document.getElementById("fetchBtn").addEventListener("click", async () =>
         }]
     }
     });
+
+    
 
 });
