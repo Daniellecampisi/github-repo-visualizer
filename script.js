@@ -16,8 +16,6 @@ document.getElementById("fetchBtn").addEventListener("click", async () =>
     return;
     }
 
-    console.log(repos); // Debug
-
     const languageCount = {};
 
     repos.forEach(repo => {
@@ -26,6 +24,23 @@ document.getElementById("fetchBtn").addEventListener("click", async () =>
     }
     });
 
-    console.log(languageCount);
+    const ctx = document.getElementById('langChart').getContext('2d');
+    new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: Object.keys(languageCount),
+        datasets: [{
+        label: 'Languages Used',
+        data: Object.values(languageCount),
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)'
+        ]
+        }]
+    }
+    });
 
 });
