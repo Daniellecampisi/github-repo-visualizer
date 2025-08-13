@@ -35,7 +35,7 @@ cd github-repo-visualizer
 
 ## Screenshots
 ![Example Image](ScreenShots/Example.png).
-
+![Example Video](ScreenShots/Showcase.MOV).
 
 ## Usage
 - The table shows repository info including name, primary language, stars, and forks
