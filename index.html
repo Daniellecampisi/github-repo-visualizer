@@ -1,21 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Repo Visualizer</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
 <body>
-  <h1>GitHub Repo Visualizer</h1>
-  <input type="text" id="username" placeholder="Enter GitHub username">
-  <button id="fetchBtn">Fetch Repos</button>
-  <canvas id="langChart"></canvas>
+  <div class="container">
+    <h1>GitHub Repo Visualizer</h1>
+    
+    <div class="input-section">
+      <input type="text" id="username" placeholder="Enter GitHub username">
+      <button id="fetchBtn">Fetch Repos</button>
+    </div>
+
+    <div class="dashboard">
+      <div class="chart-section">
+        <canvas id="langChart"></canvas>
+      </div>
+
+      <div class="right-section">
+        <div id="stats" class="stats-section" style="display: none;">
+          <p id="stars"></p>
+          <p id="forks"></p>
+        </div>
+
+        <div class="table-section" style="display: none;">
+          <table id="repoTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Language</th>
+                <th>Stars</th>
+                <th>Forks</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
-<div id="stats">
-  <p id="stars"></p>
-  <p id="forks"></p>
-</div>
-</html>
