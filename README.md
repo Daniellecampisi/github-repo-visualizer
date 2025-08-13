@@ -33,8 +33,7 @@ cd github-repo-visualizer
 2. Open index.html in your browser
 3. Enter a GitHub username and click Fetch Repos
 
-## Screenshots
-![Example Image](ScreenShots/Example.png).
+## Showcase
 ![Example Video](ScreenShots/Recording.mov).
 
 ## Usage
